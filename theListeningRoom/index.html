@@ -5,9 +5,10 @@
     <title>Listening Room</title>
     <meta name="author" content="Chris Bingham" />
     <meta name="description" content="support page for the listening room iOS app" />
-    <meta name="keywords"  content="diary room listening listeningroom recording" />
+    <meta name="keywords" content="diary room listening listeningroom recording" />
     <meta name="Resource-type" content="Document" />
     <link rel="stylesheet" type="text/css" href="css/fullpage.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu.css" />
     <script type="text/javascript" src="js/fullpage.min.js"></script>
     <script type="text/javascript" src="js/fullpage.extensions.min.js"></script>
     <style>
@@ -16,33 +17,48 @@
             height: auto;
             border-radius: 0.5em;
         }
-        body{ font-family: sans-serif;}
+
+        body {
+            font-family: sans-serif;
+        }
+
         .section {
             /*width: 50em;
             margin: auto;*/
             background-color: gainsboro
         }
+
         .featureInfo {
         }
-        .featureInfo > div {
-            display: inline-block;
-            max-width: 24%;
-            background-color: white;
-            border-radius: .74em;
-            padding: .3em;
-        }
+
+            .featureInfo > div {
+                display: inline-block;
+                max-width: 24%;
+                background-color: white;
+                border-radius: .74em;
+                padding: .3em;
+            }
+
         .section:nth-child(odd) {
             background: azure;
         }
+
         .section {
             text-align: center;
         }
     </style>
 </head>
 <body>
-    
-    <div id="fullpage">
-        <div class="section">
+
+    <ul id="menu">
+        <li data-menuanchor="p1" class="active"><a href="#p1">Welcome</a></li>
+        <li data-menuanchor="p2"><a href="#p2">Recording</a></li>
+        <li data-menuanchor="p3"><a href="#p3">Management</a></li>
+        <li data-menuanchor="p4"><a href="#p4">Settings</a></li>
+    </ul>
+
+    <div id="fullPage">
+        <div class="section" id="titleSection">
             <div class="featureInfo">
                 <h1>The Listening Room</h1>
                 <div>
@@ -50,74 +66,73 @@
                 </div>
             </div>
         </div>
-        <div class="section">
+        <div class="section" id="recordingSection">
             <div class="featureInfo">
                 <h1>Recording Screen</h1>
                 <div>
                     <h2>How to record</h2>
                     <p>Tap the microphone icon to begin recording.</p>
-                    <img src="images/RecordingScreen.png" alt="app home screen" />
+                    <img src="images/RecordingScreen.png" alt="app home screen" >
                 </div>
                 <div>
                     <h2>Stop Recording</h2>
                     <p>Tap the microphone again when you have finished speaking</p>
-                    <img src="images/RecordingStarted.png" alt="recording timer" />
+                    <img src="images/RecordingStarted.png" alt="recording timer" >
                 </div>
             </div>
         </div>
-        <div class="section">
+        <div class="section" id="managementSection">
             <div class="featureInfo">
                 <h1>Managing Recordings</h1>
                 <div>
                     <h2>Library</h2>
                     <p>a list of recordings, displaying the date and time that the recording started as well as the file-size.</p>
-                    <img src="images/AdminScreen.png" alt="app admin screen" />
+                    <img src="images/AdminScreen.png" alt="app admin screen" >
                 </div>
                 <div>
                     <h2>Play/Delete</h2>
                     <p>swiping left on a recording provides options to delete or play the recording.</p>
-                    <img src="images/RecordingSwipe.png" alt="swipe recording left" />
+                    <img src="images/RecordingSwipe.png" alt="swipe recording left" >
                 </div>
                 <div>
                     <h2>Reload</h2>
                     <p>if you cant see any recordings, pull down on the list to refresh it.</p>
-                    <img src="images/AdminReloadList.png" alt="pull to refresh" />
+                    <img src="images/AdminReloadList.png" alt="pull to refresh" >
                 </div>
             </div>
         </div>
-        <div class="section">
+        <div class="section" id="settingsSection">
             <div class="featureInfo">
                 <h1>Settings</h1>
                 <div>
                     <h2>Protect the recording page</h2>
                     <p>A password can be set to prevent access to the admin screen and keep individual recordings safe.</p>
-                    <img src="images/PasswordReset.png" alt="app password reset screen" />
+                    <img src="images/PasswordReset.png" alt="app password reset screen" >
                 </div>
                 <div>
                     <h2>Export to iTunes</h2>
                     <p>load iTunes and click the button hi-lighted in yellow below</p>
                     <img src="images/itunes-step-1.png" alt="select the device icon"/>
                     <p>Select File Sharing from the Settings menu for your device</p>
-                    <img src="images/itunes-step-2.png" alt="goto file sharing"/>
+                    <img src="images/itunes-step-2.png" alt="goto file sharing" >
                     <p>you may then use the save button to copy the files to your device, the delete key can be used to delete files</p>
-                    <img src="images/itunes-step-3.png" alt="select The Listening Room"/>
+                    <img src="images/itunes-step-3.png" alt="select The Listening Room" >
                 </div>
             </div>
         </div>
     </div>
 
     <script type="text/javascript">
-        new fullpage('#fullpage', {
-            //options here
-            navigation: true,
-            navigationPosition: 'right',
-
+        new fullpage('#fullPage', {
+            css3: true,
             menu: '#menu',
+            anchors: [ 'p1', 'p2', 'p3', 'p4' ],
+            navigation: true,
+            navigationPosition: 'left',
             autoScrolling: true,
             scrollHorizontally: true
         });
 
-        //methods
         fullpage_api.setAllowScrolling(true);
     </script>
 </body>
