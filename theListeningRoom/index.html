@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -23,24 +23,25 @@
         }
 
         .section {
-            /*width: 50em;
-            margin: auto;*/
-            background-color: gainsboro
+            background: url(images/BACKGROUND_BOTTOM.png);
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            background-size: 50%;
         }
-
-        .featureInfo {
-        }
-
-            .featureInfo > div {
-                display: inline-block;
-                max-width: 24%;
-                background-color: white;
-                border-radius: .74em;
-                padding: .3em;
-            }
 
         .section:nth-child(odd) {
-            background: azure;
+            background: url(images/BACKGROUND_TOP.png);
+            background-repeat: no-repeat;
+            background-position: top right;
+            background-size: 50%;
+        }
+
+        .featureInfo > div {
+            display: inline-block;
+            max-width: 24%;
+            background-color: white;
+            border-radius: .74em;
+            padding: .3em;
         }
 
         .section {
@@ -72,12 +73,12 @@
                 <div>
                     <h2>How to record</h2>
                     <p>Tap the microphone icon to begin recording.</p>
-                    <img src="images/RecordingScreen.png" alt="app home screen" >
+                    <img src="images/RecordingScreen.png" alt="app home screen">
                 </div>
                 <div>
                     <h2>Stop Recording</h2>
                     <p>Tap the microphone again when you have finished speaking</p>
-                    <img src="images/RecordingStarted.png" alt="recording timer" >
+                    <img src="images/RecordingStarted.png" alt="recording timer">
                 </div>
             </div>
         </div>
@@ -87,17 +88,17 @@
                 <div>
                     <h2>Library</h2>
                     <p>a list of recordings, displaying the date and time that the recording started as well as the file-size.</p>
-                    <img src="images/AdminScreen.png" alt="app admin screen" >
+                    <img src="images/AdminScreen.png" alt="app admin screen">
                 </div>
                 <div>
                     <h2>Play/Delete</h2>
                     <p>swiping left on a recording provides options to delete or play the recording.</p>
-                    <img src="images/RecordingSwipe.png" alt="swipe recording left" >
+                    <img src="images/RecordingSwipe.png" alt="swipe recording left">
                 </div>
                 <div>
                     <h2>Reload</h2>
                     <p>if you cant see any recordings, pull down on the list to refresh it.</p>
-                    <img src="images/AdminReloadList.png" alt="pull to refresh" >
+                    <img src="images/AdminReloadList.png" alt="pull to refresh">
                 </div>
             </div>
         </div>
@@ -107,16 +108,16 @@
                 <div>
                     <h2>Protect the recording page</h2>
                     <p>A password can be set to prevent access to the admin screen and keep individual recordings safe.</p>
-                    <img src="images/PasswordReset.png" alt="app password reset screen" >
+                    <img src="images/PasswordReset.png" alt="app password reset screen">
                 </div>
                 <div>
                     <h2>Export to iTunes</h2>
                     <p>load iTunes and click the button hi-lighted in yellow below</p>
-                    <img src="images/itunes-step-1.png" alt="select the device icon"/>
+                    <img src="images/itunes-step-1.png" alt="select the device icon" />
                     <p>Select File Sharing from the Settings menu for your device</p>
-                    <img src="images/itunes-step-2.png" alt="goto file sharing" >
+                    <img src="images/itunes-step-2.png" alt="goto file sharing">
                     <p>you may then use the save button to copy the files to your device, the delete key can be used to delete files</p>
-                    <img src="images/itunes-step-3.png" alt="select The Listening Room" >
+                    <img src="images/itunes-step-3.png" alt="select The Listening Room">
                 </div>
             </div>
         </div>
@@ -126,7 +127,7 @@
         new fullpage('#fullPage', {
             css3: true,
             menu: '#menu',
-            anchors: [ 'p1', 'p2', 'p3', 'p4' ],
+            anchors: ['p1', 'p2', 'p3', 'p4'],
             navigation: true,
             navigationPosition: 'left',
             autoScrolling: true,

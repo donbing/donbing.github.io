@@ -12,10 +12,10 @@
     background: rgba(0,0,0, 0.5);
     color: #fff;
 }
-#menu li a{
-    text-decoration:none;
-    color: #000;
-}
+    #menu li a {
+        text-decoration: none;
+        color: #000;
+    }
 #menu li.active a:hover{
     color: #000;
 }
