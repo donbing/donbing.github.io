@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\theListeningRoom",
-    "\\theListeningRoom\\css"
+    "\\eCoach",
+    "\\theListeningRoom"
   ],
+  "SelectedNode": "\\theListeningRoom\\index.html",
   "PreviewInSolutionExplorer": false
 }
